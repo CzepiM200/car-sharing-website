@@ -1,1 +1,148 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./css/reset.css"><link rel="stylesheet" href="./css/style.css"><title>CarSharing</title></head><body><h1>Hello world</h1></body></html>
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+body {
+    color: white;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.container {
+    width: 1088px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100vw;
+    position: relative;
+    background-color: #00000066;
+    display: flex;
+    justify-content: center;
+}
+
+header .side {
+    background-color: #00000066;
+    width: calc((100vw - 1088px)/2);
+    height: 78px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    padding: 20px;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #00000066;
+    justify-self: start;
+    width: 50%;
+    cursor: default;
+}
+
+header .logo span {
+    color: #FF0000;
+}
+
+header nav {
+    /* border-bottom: 1px solid #00000066; */
+    font-size: 16px;
+    align-self: right;
+    width: 50%;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    width: 100%;
+}
+
+header nav li {
+    padding: 31px 30px;
+    background-color: #00000066;
+}
+
+header nav li.extender {
+    width: 100%;
+}
+
+header nav li:hover {
+    background-color: #00000000;
+    cursor: default;
+}
+
+header nav li.extender:hover {
+    width: 100%;
+    background-color: #00000066;
+}
+
+.banner {
+    height: 730px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    font-size: 115px;
+    font-weight: 900;
+}
+
+.banner p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.banner::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-color: #00000066;
+    width: 100%;
+    height: 730px;
+    z-index: -1;
+}
+
+.banner .buttons {
+    margin: 40px 0;
+}
+
+.banner .buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 30px;
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.banner .buttons a.primary {
+    background-color: #FF0000;
+    color: white;
+    margin-right: 20px;
+}
+
+.banner .buttons a.secondary {
+    background-color: white;
+    color: #FF0000;
+}
+
+header::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 807px;
+    z-index: -1;
+}
