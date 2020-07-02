@@ -2,6 +2,8 @@
 body {
     color: white;
     font-family: 'Nunito Sans', sans-serif;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 .container {
@@ -10,7 +12,7 @@ body {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     position: relative;
     background-color: #00000066;
     display: flex;
@@ -78,6 +80,21 @@ header nav li.extender:hover {
     background-color: #00000066;
 }
 
+header::before {
+    display: block;
+    content: "";
+    position: absolute;
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 807px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .banner {
     height: 730px;
     display: flex;
@@ -99,6 +116,11 @@ header nav li.extender:hover {
     margin: 20px 0;
 }
 
+.positioner {
+    position: relative;
+    width: 100vw;
+}
+
 .banner::before {
     display: block;
     content: "";
@@ -106,6 +128,8 @@ header nav li.extender:hover {
     background-color: #00000066;
     width: 100%;
     height: 730px;
+    top: 0;
+    left: 0;
     z-index: -1;
 }
 
@@ -113,36 +137,114 @@ header nav li.extender:hover {
     margin: 40px 0;
 }
 
-.banner .buttons a {
-    text-decoration: none;
+.btn__primary {
+    background-color: #FF0000;
     color: white;
+    margin-right: 20px;
+    text-decoration: none;
     padding: 20px 30px;
     border-radius: 30px;
-    background-color: white;
     text-transform: uppercase;
     font-weight: bold;
 }
 
-.banner .buttons a.primary {
-    background-color: #FF0000;
-    color: white;
-    margin-right: 20px;
-}
-
-.banner .buttons a.secondary {
+.btn__secondary {
     background-color: white;
     color: #FF0000;
+    text-decoration: none;
+    padding: 20px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-header::before {
-    display: block;
-    content: "";
-    position: absolute;
-    background-image: url("../images/bg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.blog {
+    color: black;
+    margin: 70px 0;
+}
+
+.blog section {
+    color: #6A6A6A;
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__headline {
+    margin: 80px 0 40px 0;
     width: 100%;
-    height: 807px;
-    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .blog__header {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.blog__line {
+    border: 2px solid #FF0000;
+    border-radius: 10px;
+    width: 40px;
+    height: 0px;
+    margin: 0 10px;
+}
+*/
+
+.headline {
+    margin: 80px 0 40px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.line {
+    border: 2px solid #FF0000;
+    border-radius: 10px;
+    width: 40px;
+    height: 0px;
+    margin: 0 10px;
+}
+
+.blog__title {
+    margin: 20px 0;
+    font-size: 25px;
+    text-align: left;
+    /* padding: 0 10px 0 0; */
+}
+
+p.blog__text {
+    margin: 0 0 20px 0;
+    /* padding: 0 10px 0 0; */
+}
+
+.blog a.btn__primary {
+    width: max-content;
+    padding: 13px 30px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.blog__image {
+    width: 352px;
+}
+
+.blog__article {
+    width: 352px;
 }
