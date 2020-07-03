@@ -9,6 +9,7 @@ body {
 .container {
     width: 1088px;
     margin: 0 auto;
+    cursor: default;
 }
 
 header {
@@ -267,4 +268,103 @@ p.blog__text {
     opacity: 0.5;
     font-weight: 200;
     margin: 0 0 20px 0;
+}
+
+.contact {
+    color: black;
+}
+
+.contact__headline {
+    padding: 50px 0;
+}
+
+.contact__section {
+    display: flex;
+}
+
+.contact__article {
+    width: 50%;
+}
+
+.contact__image {
+    width: 100%;
+}
+
+.contact__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+}
+
+.contact__submit {
+    border: 1px solid #FF0000;
+    padding: 10px 50px;
+    border-radius: 30px;
+    background-color: white;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: 'Nunito Sans', sans-serif;
+    padding: 15px;
+    margin: 7px 0;
+    box-sizing: border-box;
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+    width: 100%;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border: 1px solid #FF0000;
+    outline: none;
+    box-shadow: 0 1px 4px #ff000077;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #D1D1D1;
+    margin: auto 0;
+    border-radius: 7px;
+    background-color: white;
+    position: relative;
+    outline: none;
+}
+
+input[type="checkbox"]:checked:after {
+    content: "✔";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: #FF0000;
+    font-weight: bold;
+    position: absolute;
+    left: 20%;
+    top: 0%;
+}
+
+.contact__info {
+    display: inline-block;
+    color: #B2B2B2;
+}
+
+textarea {
+    min-height: 150px;
+    resize: none;
+}
+
+footer {
+    background-color: #28272C;
+    height: 200px;
+    margin-top: 100px;
 }
